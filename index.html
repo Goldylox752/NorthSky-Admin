@@ -1,367 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>NorthSky OS | Contractor Revenue Intelligence System</title>
+<title>NorthSky OS | Contractor Revenue Intelligence System</title>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: "Inter", sans-serif;
-      background: radial-gradient(circle at top, #0f172a, #020617);
-      color: white;
-      line-height: 1.6;
-    }
+body {
+  font-family: Inter, sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: white;
+  line-height: 1.6;
+}
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+a { text-decoration: none; color: inherit; }
 
-    .container {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+.container {
+  max-width: 1180px;
+  margin: auto;
+  padding: 0 24px;
+}
 
-    /* ================= NAV ================= */
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 28px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+}
 
-    .logo {
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-    }
+.nav-links a {
+  margin-left: 18px;
+  font-size: 14px;
+  opacity: 0.8;
+}
 
-    .nav-links a {
-      margin-left: 24px;
-      font-size: 15px;
-      opacity: 0.85;
-      transition: 0.2s ease;
-    }
+.nav-links a:hover {
+  opacity: 1;
+}
 
-    .nav-links a:hover {
-      opacity: 1;
-    }
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 0 70px;
+}
 
-    /* ================= HERO ================= */
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: #38bdf8;
+  border: 1px solid rgba(56,189,248,0.5);
+  background: rgba(56,189,248,0.08);
+  margin-bottom: 16px;
+}
 
-    .hero {
-      text-align: center;
-      padding: 100px 0 70px;
-    }
+.hero h1 {
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1.05;
+  max-width: 900px;
+  margin: auto;
+}
 
-    .eyebrow {
-      color: #38bdf8;
-      font-weight: 700;
-      font-size: 14px;
-      margin-bottom: 14px;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
+.hero p {
+  margin-top: 18px;
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(255,255,255,0.72);
+  font-size: 18px;
+}
 
-    .hero h1 {
-      font-size: 54px;
-      font-weight: 800;
-      line-height: 1.1;
-      max-width: 850px;
-      margin: 0 auto 20px;
-    }
+/* CTA */
+.cta {
+  margin-top: 36px;
+}
 
-    .hero p {
-      max-width: 720px;
-      margin: 0 auto;
-      font-size: 18px;
-      color: rgba(255,255,255,0.72);
-    }
+.btn {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  margin: 8px;
+  transition: 0.2s ease;
+}
 
-    .cta-group {
-      margin-top: 36px;
-    }
+.btn:hover {
+  transform: translateY(-2px);
+}
 
-    .btn {
-      display: inline-block;
-      padding: 14px 24px;
-      border-radius: 999px;
-      font-weight: 700;
-      margin: 8px;
-      transition: 0.2s ease;
-    }
+.primary {
+  background: #38bdf8;
+  color: black;
+}
 
-    .btn:hover {
-      transform: translateY(-1px);
-    }
+.secondary {
+  background: #22c55e;
+  color: black;
+}
 
-    .btn-primary {
-      background: #38bdf8;
-      color: black;
-    }
+/* SECTIONS */
+.section {
+  padding: 70px 0;
+}
 
-    .btn-secondary {
-      background: #22c55e;
-      color: black;
-    }
+.center {
+  text-align: center;
+}
 
-    /* ================= SECTIONS ================= */
+.section h2 {
+  font-size: 34px;
+  font-weight: 800;
+}
 
-    .section {
-      padding: 70px 0;
-    }
+.section p {
+  margin-top: 12px;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(255,255,255,0.7);
+}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-    }
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 36px;
+}
 
-    .section-title h2 {
-      font-size: 34px;
-      font-weight: 800;
-      margin-bottom: 10px;
-    }
+.card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 24px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
 
-    .section-title p {
-      color: rgba(255,255,255,0.7);
-    }
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
+.card p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+}
 
-    .card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 18px;
-      padding: 28px;
-      backdrop-filter: blur(10px);
-    }
+/* highlight */
+.highlight {
+  color: #38bdf8;
+  font-weight: 700;
+}
 
-    .card h3 {
-      font-size: 20px;
-      margin-bottom: 12px;
-    }
+/* CTA */
+.cta-block {
+  text-align: center;
+  padding: 90px 0;
+}
 
-    .card p {
-      color: rgba(255,255,255,0.72);
-      font-size: 15px;
-    }
+.cta-block h2 {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
 
-    .highlight {
-      color: #38bdf8;
-      font-weight: 700;
-    }
+.cta-block p {
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 28px;
+}
 
-    /* ================= BIG CTA ================= */
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+}
 
-    .big-cta {
-      text-align: center;
-      padding: 90px 0;
-    }
-
-    .big-cta h2 {
-      font-size: 38px;
-      margin-bottom: 12px;
-    }
-
-    .big-cta p {
-      color: rgba(255,255,255,0.72);
-      margin-bottom: 28px;
-    }
-
-    /* ================= FOOTER ================= */
-
-    footer {
-      text-align: center;
-      padding: 40px 0 30px;
-      font-size: 13px;
-      color: rgba(255,255,255,0.45);
-    }
-
-    /* ================= MOBILE ================= */
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 38px;
-      }
-
-      .section-title h2 {
-        font-size: 28px;
-      }
-
-      .big-cta h2 {
-        font-size: 30px;
-      }
-
-      .nav-links a {
-        margin-left: 14px;
-        font-size: 14px;
-      }
-    }
-  </style>
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 36px; }
+  .section h2 { font-size: 26px; }
+  .cta-block h2 { font-size: 30px; }
+}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <!-- ================= NAV ================= -->
+<!-- NAV -->
+<nav>
+  <div class="logo">NorthSky OS</div>
+  <div class="nav-links">
+    <a href="/pricing">Pricing</a>
+    <a href="/apply">Apply</a>
+  </div>
+</nav>
 
-    <nav>
-      <div class="logo">NorthSky OS</div>
+<!-- HERO -->
+<section class="hero">
 
-      <div class="nav-links">
-        <a href="/pricing">Pricing</a>
-        <a href="/apply">Apply</a>
-      </div>
-    </nav>
+  <div class="badge">Revenue Intelligence Layer for Contractors</div>
 
-    <!-- ================= HERO ================= -->
+  <h1>
+    Turn Roofing Traffic Into Predictable Revenue
+  </h1>
 
-    <section class="hero">
-      <div class="eyebrow">
-        Contractor Revenue Infrastructure
-      </div>
+  <p>
+    NorthSky OS connects lead generation, AI qualification, drone inspections,
+    and deal tracking into one unified contractor operating system.
+  </p>
 
-      <h1>
-        Turn Roofing Traffic Into Predictable Revenue
-      </h1>
+  <div class="cta">
+    <a class="btn primary" href="/apply">Apply for Access</a>
+    <a class="btn secondary" href="/pricing">View Pricing</a>
+  </div>
 
-      <p>
-        NorthSky OS connects lead generation, inspections, follow-up,
-        and deal closing inside one high-performance contractor ecosystem.
-      </p>
+</section>
 
-      <div class="cta-group">
-        <a href="/apply" class="btn btn-primary">
-          Apply for Access
-        </a>
+<!-- SYSTEMS -->
+<section class="section center">
 
-        <a href="/pricing" class="btn btn-secondary">
-          View Pricing
-        </a>
-      </div>
-    </section>
+  <h2>The 3-System Stack</h2>
 
-    <!-- ================= 3 SYSTEMS ================= -->
+  <p>One ecosystem built to increase close rates and maximize revenue per lead</p>
 
-    <section class="section">
-      <div class="section-title">
-        <h2>The 3-System Ecosystem</h2>
-        <p>
-          Built to capture more jobs and close higher-value contracts
-        </p>
-      </div>
+  <div class="grid">
 
-      <div class="grid">
+    <div class="card">
+      <h3>RoofFlow AI</h3>
+      <p>AI lead capture + qualification engine that filters high-intent homeowners.</p>
+    </div>
 
-        <div class="card">
-          <h3>1. RoofFlow AI</h3>
-          <p>
-            Captures, qualifies, and routes high-intent homeowner leads
-            automatically into your pipeline.
-          </p>
-        </div>
+    <div class="card">
+      <h3>Skymaster Drone OS</h3>
+      <p>Turns inspections into visual proof that increases trust and closing speed.</p>
+    </div>
 
-        <div class="card">
-          <h3>2. Skymaster Drone OS</h3>
-          <p>
-            Turns inspections into visual proof that increases trust,
-            urgency, and close rates.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>3. Revenue OS</h3>
-          <p>
-            Tracks lead intent, deal progress, and contractor performance
-            to maximize revenue.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ================= PROBLEM ================= -->
-
-    <section class="section">
-      <div class="card">
-        <h2 style="margin-bottom: 14px;">
-          Why Most Roofing Companies Struggle to Scale
-        </h2>
-
-        <p>
-          Most contractors lose serious revenue because they rely on:
-          <br /><br />
-          • Cold leads with no qualification system  
-          <br />
-          • Manual follow-up and inconsistent sales flow  
-          <br />
-          • No inspection proof to increase close rates  
-          <br />
-          • No unified system connecting traffic to revenue
-        </p>
-      </div>
-    </section>
-
-    <!-- ================= SOLUTION ================= -->
-
-    <section class="section">
-      <div class="card">
-        <h2 style="margin-bottom: 14px;">
-          NorthSky Solves the Revenue Gap
-        </h2>
-
-        <p>
-          We connect
-          <span class="highlight">
-            traffic → intent → inspection → revenue
-          </span>
-          inside one operating system designed for serious contractors.
-        </p>
-      </div>
-    </section>
-
-    <!-- ================= CTA ================= -->
-
-    <section class="big-cta">
-      <h2>Ready to Join the Ecosystem?</h2>
-
-      <p>
-        Contractor access is limited by region to protect lead exclusivity
-      </p>
-
-      <a href="/apply" class="btn btn-primary">
-        Apply Now
-      </a>
-    </section>
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-      NorthSky OS · Revenue Infrastructure Layer
-    </footer>
+    <div class="card">
+      <h3>Revenue OS</h3>
+      <p>Tracks pipeline, conversions, and contractor performance in real time.</p>
+    </div>
 
   </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="section">
+
+  <div class="card">
+    <h2>Why Contractors Lose Revenue</h2>
+
+    <p>
+      Most roofing companies fail to scale because they rely on:
+      <br><br>
+      • Unqualified leads with no filtering system<br>
+      • Manual follow-ups and inconsistent sales flow<br>
+      • No inspection proof to increase trust<br>
+      • No unified system connecting traffic to revenue
+    </p>
+
+  </div>
+
+</section>
+
+<!-- SOLUTION -->
+<section class="section">
+
+  <div class="card">
+    <h2>The NorthSky Advantage</h2>
+
+    <p>
+      We connect
+      <span class="highlight">traffic → intent → inspection → revenue</span>
+      inside a single contractor intelligence system built for scale.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta-block">
+
+  <h2>Join the Contractor Network</h2>
+
+  <p>Access is limited by territory to protect lead exclusivity</p>
+
+  <a class="btn primary" href="/apply">Apply Now</a>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  NorthSky OS · Contractor Revenue Intelligence System
+</footer>
+
+</div>
 
 </body>
 </html>
